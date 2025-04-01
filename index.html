@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>
+      HydroMetrix - Encuesta
+    </title>
+  </head>
+
+  <body>
+
+    <h1 id="title">
+      HydroMetrix formulario encuesta
+    </h1>
+
+    <p id="description">
+      Bienvenidos y gracias por ayudarnos a recopilar datos precisos.
+    </p>
+
+    <form id="survey-form" action="#">
+      <!-- Info personal -->
+      <fieldset>
+        <label for="name" id="name-label">
+          Nombre 
+          <input id="name" type="text" placeholder="Juan Pérez" required />
+        </label>
+
+        <label for="email" id="email-label">
+          Correo electrónico 
+          <input id="email" type="email" placeholder="juan.perez@ejemplo.com" required />
+        </label>
+
+        <label for="number" id="number-label">
+          Edad (opcional) 
+          <input id="number" type="number" min="13" max="120" placeholder="18" />
+        </label>
+
+        <label for="city" id="city-label">
+          Ciudad 
+          <input id="city" type="text" placeholder="Ciudad de Buenos Aires" required />
+        </label>
+      </fieldset>
+      <!-- Desplegable -->
+      <fieldset>
+        <label for="dropdown">
+          ¿Qué opción se ajusta más a su sensación pluvial en este año?
+        </label>
+          <select id="dropdown" name="rainfall-sensation" required>
+            <option id="option-0" value="" disabled selected>
+              Seleccione una
+            </option>
+            <option id="option-1" value="muy-baja">
+              Muy baja
+            </option>
+            <option id="option-2" value="baja">
+              Baja
+            </option>
+            <option id="option-3" value="normal">
+              Normal
+            </option>
+            <option id="option-4" value="alta">
+              Alta
+            </option>
+            <option id="option-5" value="muy-alta">
+              Muy alta
+            </option>
+          </select>
+      </fieldset>
+      <!-- Botones de radio -->
+      <fieldset>
+        <legend>
+          Frecuencia de lluvias en su ciudad
+        </legend>
+        <label for="daily" class="inline">
+          <input name="radio-frequency" type="radio" id="daily" value="diario" checked />
+          Diaria
+        </label>
+        <label for="weekly" class="inline">
+          <input name="radio-frequency" type="radio" id="weekly" value="semanal" />
+          Semanal
+        </label>
+        <label for="monthly" class="inline">
+          <input name="radio-frequency" type="radio" id="monthly" value="mensual" />
+          Mensual
+        </label>
+        <label for="rare" class="inline">
+          <input name="radio-frequency" type="radio" id="rare" value="pocas-veces" />
+          Pocas veces al año
+        </label>
+      </fieldset>
+      <!-- Checkboxes -->
+      <fieldset>
+        <legend>
+          Condiciones climáticas extremas que ha experimentado durante el año (Marque todo lo que corresponda)
+        </legend>
+        <label for="storms" class="inline">
+          <input id="storms" value="tormentas-fuertes" type="checkbox"/>
+          Tormentas fuertes
+        </label>
+        <label for="floods" class="inline">
+          <input id="floods" value="inundaciones" type="checkbox"/>
+          Inundaciones
+        </label>
+        <label for="droughts" class="inline">
+          <input id="droughts" value="sequias-prolongadas" type="checkbox"/>
+          Sequías prolongadas
+        </label>
+        <label for="heat-waves" class="inline">
+          <input id="heat-waves" value="olas-de-calor" type="checkbox"/>
+          Olas de calor
+        </label>
+        <label for="snowfalls" class="inline">
+          <input id="snowfalls" value="nevadas-intensas" type="checkbox"/>
+          Nevadas intensas
+        </label>
+      </fieldset>
+      <!-- Comentarios adicionales -->
+      <fieldset>
+        <!-- <legend>
+          Comentarios adicionales (opcional)
+        </legend> -->
+        <label for="comments">
+          ¿Tienes algún comentario adicional sobre las condiciones climáticas que has experimentado este año? (opcional)
+        </label>
+        <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Escribe aquí tus comentarios..."></textarea>
+      </fieldset>
+      <!-- Botón enviar -->
+      <input type="submit" id="submit" value="Enviar" />
+    </form>
+
+  </body>
+
+</html>
